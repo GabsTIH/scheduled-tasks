@@ -6,7 +6,7 @@ OWM_Endpoint = 'https://api.openweathermap.org/data/2.5/forecast'
 API_KEY = os.environ.get('OWM_API_KEY')
 MY_LAT = -23.463751
 MY_LON = -46.533550
-my_email = 'pymailtest2000@gmail.com'
+MY_EMAIL = 'pymailtest2000@gmail.com'
 PASS = os.environ.get('EMAIL_PASSWORD')
 
 parameters ={
@@ -30,9 +30,9 @@ for i in weather_data['list']:
 if will_rain:
     with smtplib.SMTP('smtp.gmail.com') as conn:
         conn.starttls()
-        conn.login(my_email, PASS)
+        conn.login(MY_EMAIL, PASS)
         conn.sendmail(
-            from_addr=my_email,
+            from_addr=MY_EMAIL,
             to_addrs='pymailtest2000@yahoo.com',
             msg=f"Subject:Rain Alert\n\nBe alert! In the next 12 hours there's a chance that it'll rain!"
             )
