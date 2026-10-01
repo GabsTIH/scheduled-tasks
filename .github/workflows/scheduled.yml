@@ -41,7 +41,7 @@ jobs:
         env:
           # Your secrets are available as environment variables
           # Add more secrets in Settings > Secrets > Actions
-          EMAIL: ${{ secrets.MY_EMAIL }}
-          PASS: ${{ secrets.EMAIL_PASSWORD }}
-          API_KEY: ${{ secrets.OWM_API_KEY }}
+          MY_EMAIL: ${{ secrets.MY_EMAIL }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          OWM_API_KEY: ${{ secrets.OWM_API_KEY }}
         run: python main.py
